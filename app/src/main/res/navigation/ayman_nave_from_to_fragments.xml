@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ayman_nave_from_to_fragments"
+    app:startDestination="@id/listOfOfUsersFragment">
+
+    <fragment
+        android:id="@+id/listOfOfUsersFragment"
+        android:name="com.ayman.roomdatabasetraining.fragment.listusers.ListOfOfUsersFragment"
+        android:label="fragment_list_of_of_users"
+        tools:layout="@layout/fragment_list_of_of_users" >
+        <action
+            android:id="@+id/action_listOfOfUsersFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.ayman.roomdatabasetraining.fragment.adduser.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" >
+        <action
+            android:id="@+id/action_addUserFragment_to_listOfOfUsersFragment"
+            app:destination="@id/listOfOfUsersFragment" />
+        <action
+            android:id="@+id/action_addUserFragment_to_listOfOfUsersFragment2"
+            app:destination="@id/listOfOfUsersFragment" />
+    </fragment>
+</navigation>
